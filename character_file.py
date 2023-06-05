@@ -64,7 +64,7 @@ class Diomedes(Entity):
     
     def rebalancing_player_missed_rate(self):
         while True:
-            previous_weights = Hercules.weights
+            previous_weights = [0.10, 0.90]
             Hercules.weights = previous_weights
             if Diomedes.health > 0:
                 Hercules.weights[0] += 0.125
@@ -81,11 +81,11 @@ class GiantHorses(Entity):
     
     def rebalancing_player_missed_rate():
         while True:
-            previous_weights = Hercules.weights
+            previous_weights = [0.10, 0.90]
             Hercules.weights = previous_weights
             if GiantHorses.health > 0:
-                Hercules.weights[0] += 0.125
-                Hercules.weights[1] -= 0.125
+                Hercules.weights[0] += 0.25
+                Hercules.weights[1] -= 0.25
             else:
                 Hercules.weights = previous_weights
                 return

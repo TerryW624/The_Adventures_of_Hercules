@@ -1,10 +1,10 @@
 class Items:
     pass
 
-class Armor:
+class Armor(Items):
     pass
 
-class Weapon:
+class Weapon(Items):
     pass
 
 class QuestItems(Items):
